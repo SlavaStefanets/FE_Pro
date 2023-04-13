@@ -54,11 +54,23 @@
 
 // let a = 2;
 // let b = 6;
-// let sing = "*";
+// let sing = "/ 0";
 
-
-// console.log(`${a * b}`);
-// console.log(`${a / 0} 'делить на 0 нельзя'`)
+// if (sing == "*"){
+//     console.log(a * b);
+// }
+// else if(sing == "/"){
+//     console.log(a / b);
+// }
+// else if(sing == "+"){
+//     console.log(a + b);
+// }
+// else if (sing == "-"){
+//     console.log(a - b);
+// }
+// else if (sing == "/ 0"){
+//     console.log("делить на 0 нельзя")
+// }
 
 // 6 ------------
 
