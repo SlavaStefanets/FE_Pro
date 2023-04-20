@@ -60,7 +60,12 @@
 //     console.log(a * b);
 // }
 // else if(sing == "/"){
-//     console.log(a / b);
+//     if (b == 0){
+//         console.log(Nelzja)
+//     }else {
+//         console.log(a / b);
+//     }
+    
 // }
 // else if(sing == "+"){
 //     console.log(a + b);
@@ -74,15 +79,15 @@
 
 // 6 ------------
 
-let temp = 25;
-let weather = "clear";
+// let temp = 25;
+// let weather = "clear";
 
-if (temp >= 25 && weather == "clear"){
-    console.log("golf");
-}
-else if (temp > 10 < 24 && weather == "clear"){
-    console.log("bowling");
-}
-else {
-    console.log("hiking");
-}
+// if (temp >= 25 && weather == "clear"){
+//     console.log("golf");
+// }
+// else if (temp >= 10 <= 24 && weather == "clear"){
+//     console.log("bowling");
+// }
+// else {
+//     console.log("hiking");
+// }
