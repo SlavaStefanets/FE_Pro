@@ -10,22 +10,28 @@
 //     console.log(a);
 // }
 
+// ili
+
+// if(i % 4 == 0 && ( i % 400 == 0 || i % 100 != 0)){
+
+// console.log(i)
+// }
+
 // 3 ------------
 
 
-for(let a = 2; a <= 100; a ++) {
-    let isPrime = true;
+// for(let a = 2; a <= 100; a ++) {
+//     let isPrime = true;
 
+// for(let b =2; b < a; b ++) {
+//      if (a % b == 0){
+//      isPrime = false;
+//      break; } }
 
-for(let b =2; b < a; b ++) {
-     if (a % b == 0){
-     isPrime = false;
-     break; } }
+//     if (isPrime) {
 
-    if (isPrime) {
-
-     console.log(a)
-}}
+//      console.log(a)
+// }}
 
 
 
@@ -40,15 +46,18 @@ for(let b =2; b < a; b ++) {
 
 // 5 ---------
 
-// let word = 'hello';
-// let reversed = '';
+let word = 'hello';
+let reversed = '';
 
-//     for(let i = word.length -1 ; i >= 0; i --){
-//         reversed += word[i]
-//     };
-//         console.log(reversed)
+    for(let i = word.length -1 ; i >= 0; i --){
+        reversed += word[i]
+    }
+        console.log(reversed)
 
-        
+   
+
+
+
 
  
 

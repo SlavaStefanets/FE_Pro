@@ -79,7 +79,7 @@ checkString('34')
 // checkMath(4, 3)
 
 
-// function checkMath (a, b){
-//    console.log((a % b == 0) ? 'delitsja' : 'Ne delitsja')
-// }
-// checkMath(3, 3)
+function checkMath (a, b){
+   console.log((a % b == 0) ? 'delitsja' : 'Ne delitsja')
+}
+checkMath(3, 3)
