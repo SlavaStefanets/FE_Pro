@@ -33,7 +33,8 @@
 //     let numbe = 0;
 //     for(let i = 0; i < arg.length; i++){
 //      let letter = arg[i];
-//      if (letter === "А" || letter === "а" || letter === "О" || letter === "о" || letter === "У" || letter === "у" || letter === "С" || letter === "с"){
+//      if (letter === "А" || letter === "а" || letter === "О" || letter === "о" 
+// || letter === "У" || letter === "у" || letter === "С" || letter === "с"){
 
 //      continue; }
 

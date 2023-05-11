@@ -37,3 +37,11 @@
 // }
 // console.log(getLastFirst('hello'))
 
+function changeValue(Boolean, num){
+   return(Boolean) ? num **2 : num ** 0.5
+};
+
+let result = changeValue(false, 25)
+console.log(result);
+
+
