@@ -46,19 +46,21 @@
 
 // 4------------
 
-let elems = [
-    '<div><p class="text">Home</p></div>', 
-    '<div><p class="text">About</p></div>', 
-    '<div><p class="text">FAQ</p></div>', 
-    '<div><p class="text">Contacts</p></div>' 
-    ]
+// let elems = [
+//     '<div><p class="text">Home</p></div>', 
+//     '<div><p class="text">About</p></div>', 
+//     '<div><p class="text">FAQ</p></div>', 
+//     '<div><p class="text">Contacts</p></div>' 
+//     ]
 
-    function clearDate(array){
-        for(let i = 0; i < array.length; i++){
-            let index = array[i].indexOf('</p>')
-            array[i] = array[i].slice(21,index)
-            console.log(array[i]);
-        }
-    }
-    clearDate(elems)
+//     function clearDate(array){
+//         for(let i = 0; i < array.length; i++){
+//             let index = array[i].indexOf('</p>')
+//             array[i] = array[i].slice(21,index)
+//             console.log(array[i]);
+//         }
+//     }
+//     clearDate(elems)
+
+
 
