@@ -63,11 +63,11 @@
 // let phones1 = []
 // let phones2 = []
 
-//     for(let i = 0; i < phones.length; i++){
-//        if(phones[i].startsWith('+7')){
-//         phones1.push(phones[i])
+//     for(let elem of phones){
+//        if(elem.slice(0,2) === '+7'){
+//         phones1.push(elem)
 //        }  else {
-//         phones2.push(phones[i])
+//         phones2.push(elem)
 //        }
 //     }
 //     console.log(phones1);
