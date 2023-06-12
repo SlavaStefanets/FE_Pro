@@ -3,7 +3,7 @@
 // function checkString(arg){
 //     return arg[0]
 // }
-// console.log(checkString('arg'));
+// console.log(checkString('jack'));
 
 
 // 2 --------------
@@ -24,7 +24,7 @@
 //         return console.log(Math.sqrt(arg2));
 //     }
 //  }
-//  changeValue(true,4)
+//  changeValue(true,5)
 
 
 // 4 -------------
@@ -50,14 +50,14 @@
 
 // 5 --------------
 
-function greatQuence(num){
-    let result = '';
-    for(let a = 1;a <= num; a++){
+// function greatQuence(num){
+//     let result = '';
+//     for(let a = 1;a <= num; a++){
 
-        console.log(result += '*');
-    }
-    return result;
-}
-greatQuence(5)
+//         console.log(result += '*');
+//     }
+//     return result;
+// }
+// greatQuence(5)
     
 

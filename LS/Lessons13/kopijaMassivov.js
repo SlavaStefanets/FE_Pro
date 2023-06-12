@@ -40,7 +40,7 @@ let products = [
     ['Ролики', 540],
     ['Ракетки', 670]
 ]
-for(let i of products){
+for(let i in products){
     priceDiscount = products[i],[1] * 0.8; //20% discount
 }
 console.log(priceDiscount);
