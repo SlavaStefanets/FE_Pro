@@ -1,0 +1,29 @@
+* {margin: 0; padding: 0; }
+#root{
+  height: 100%;
+  max-width: 1300px;
+}
+.cards{
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    display: flex;
+}
+.img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+.element_of_Cards{
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    color: black;
+}
+.salary{
+    color: black;
+}
+.id{
+    color: black;
+}

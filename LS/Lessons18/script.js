@@ -82,10 +82,110 @@
 //     div_root.append(div_user)
 // }
 
-// ---------------- Sob6tie 
+// // ---------------- Sob6tie 
 
-let div_root = document.querySelector('#root')
+// let div_root = document.querySelector('#root')
 
-div_root.onclick = () => {
-    console.log('click');
-}
+// div_root.onclick = () => {
+//     console.log('click');
+// }
+
+// // ---------- s4jotsik
+
+// let div_root = document.querySelector('#root')
+// let btn_elem = document.querySelector('.btn')
+// let btn_reset = document.querySelector('.btn2')
+// let btn_biger = document.querySelector('.btn3')
+// let btn_change = document.querySelector('.btn4')
+
+// let counter = 0
+// let count_title = document.createElement('h1')
+// div_root.append(count_title)
+
+// btn_elem.onclick = () => {
+//     console.log(++counter)
+//     count_title.innerText = counter
+// }
+// btn_reset.onclick = () => {
+//     counter = 0
+//     count_title.innerText = counter
+// }
+// Задание: написать событие для кнопки btn2, 
+// которое будет обнулять счетчик внутри div#root
+
+
+// Задание: написать событие для кнопки btn3, которое будет 
+// увиличивать значение ширины и высоты root на 100 пикселей
+// let size = {
+//     width: 50,
+//     height: 50
+// }
+
+// btn_biger.onclick = () => {
+//     size.width += 100
+//     size.height += 100
+//     div_root.style.width = size.width + 'px'
+//     div_root.style.height = size.height = 'px'
+// }
+
+// Задание: написать событие для кнопки btn4, которе будет меня
+// цвет заднего фона div#root на красный
+
+// btn_change.onclick = () => {
+//     if (div_root.style.backgroundColor === 'red'){
+//     div_root.style.backgroundColor = 'blue'
+//     }   else {
+//     div_root.style.backgroundColor = 'blue'
+//     }
+// }
+
+// // --------------------------
+// let div_root = document.querySelector('#root')
+
+// div_root.addEventListener('click', () => {
+//     console.log('click');
+// })
+
+// div_root.addEventListener('click', () => {
+//     console.log('click2');
+// })
+
+// document.addEventListener('keydown', () =>{
+//     console.log('keydown');
+// })
+
+// let div_root = document.querySelector('#root')
+
+// div_root.addEventListener('click', (event) => {
+//     if (event.altKey){
+//         console.log('click + alt');
+//     }
+// })
+
+
+// document.addEventListener('keydown', (event) =>{
+//     console.log(event);
+// })
+
+// --------------- sob6tie - event
+
+// let div_root = document.querySelector('#root')
+
+// div_root.addEventListener('click', (event) =>{
+//     // console.log(event.target);
+//     event.target.remove()
+// })
+
+
+// Target an praktike ---------
+
+// let form = document.querySelector('form')
+
+// form.addEventListener('change', (event) =>{
+//     console.log(event.target.values);
+// })
+
+
+
+
+
