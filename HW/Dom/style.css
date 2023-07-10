@@ -14,7 +14,7 @@
     width: 350px;
     border-radius: 50%;
 }
-.element_of_Cards{
+.element_of_cards{
     display: flex;
     flex-direction: column;
 }

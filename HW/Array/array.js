@@ -18,7 +18,7 @@ let names = [
     {id: 6, name: 'Alshey', salary: '1210'},
     {id: 7, name: 'Milki', salary: '110'},
     {id: 8, name: 'Polar', salary: '120'},
-    {id: 9, name: 'Grindell', salary: '10'},
+    {id: 9, name: 'Grindellj', salary: '10'},
     ]
 //  --------------------  1
     // let result = 1
@@ -51,16 +51,24 @@ let names = [
 
     // --------------- 4
 
-    let result = names.find((values) => values % 100 !== 0)
-    console.log(result);
+    // let result = names.find((values) => values % 100 !== 0)
+    // console.log(result);
 
     // ----------------- 5
 
-    // I dont No 
+    // for(let elem of names){
+    //         if(Number.isInteger(Math.sqrt(elem.id))){
+    //             console.log(elem);
+    //         }
+    //     }
+
 
     // ---------------- 6
+      
+   let result = names.find ((values) =>
+    Number.isInteger(Math.sqrt(values.name.length))
+    )
+    console.log(result);
 
-
-   
     
     

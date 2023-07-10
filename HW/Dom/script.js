@@ -13,27 +13,32 @@ let names = [
 
 let root_div = document.querySelector('#root')
 for(let elem of names){
-let cards_div = document.createElement('cards')
+let cards_div = document.createElement('div')
+cards_div.className = 'cards'
 root_div.prepend(cards_div)
 
 let img_div = document.createElement('img')
-img_div = elem.image
+img_div.src = elem.image
 cards_div.prepend(img_div)
 
-let element_of_Cards = document.createElement('element_of_Cards')
-cards_div.append(element_of_Cards)
+let element_of_cards = document.createElement('div')
+element_of_cards.className = 'element_of_cards'
+cards_div.append(element_of_cards)
 
-let name_div = document.createElement('name')
-name_div = elem.name
-element_of_Cards.prepend(name_div)
+let name_div = document.createElement('div')
+name_div.className = 'name'
+name_div.innerText = `Name: ${elem.name}`
+element_of_cards.prepend(name_div)
 
-let salary_div = document.createElement('salary')
-salary_div = elem.salary
-element_of_Cards.append(salary_div)
+let salary_div = document.createElement('div')
+salary_div.className = 'salary'
+salary_div.innerText = `Salary: ${elem.salary}`
+element_of_cards.append(salary_div)
 
-let id_div = document.createElement('id')
-id_div = elem.id
-element_of_Cards.append(id_div)
+let id_div = document.createElement('div')
+id_div.className = 'id'
+id_div.innerText = `User Namber: ${elem.id}`
+element_of_cards.append(id_div)
 };
 
 
