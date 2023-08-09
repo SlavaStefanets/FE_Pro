@@ -1,0 +1,20 @@
+ 1 уровень сложности: Level 1
+​​Какова временная сложность?
+void test1(int n)
+{
+   if (n==1)
+      return;
+   for (int i=1; i<=n; i++)
+       for (int j=1; j<=n; j++)
+           System.out.println("*");
+           break;    я продпологаю что будет что то типо такого O(n^2)
+}
+
+void test2(int n)
+{
+   int a = 0;
+for (i = 0; i < n; i++)
+   for (j = n; j > i; j--)
+       a = a + i + j;
+
+}   как и в первом случае я могу только предположить (n^2)
