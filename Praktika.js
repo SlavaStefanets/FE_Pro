@@ -1,33 +1,28 @@
-// function changeArray(array){
-//     newArray = [];
-//     for(let i = 0; i < array.length; i ++){
-//         if(array[i] > 0){
-//         newArray.push(array[i]);
-//     }}
-//     return newArray
+
+//  Задача. Опишите две функции: writeLocalStorage(obj) и readLocalStorage(). 
+// Функции должны записывать или считывать объекты в localStorage соответственно.
+
+// function writeLocalStorage(obj){
+//     let local_date = JSON.stringify(obj)
+//     localStorage.setItem('key', 'local_date')
 // }
-// console.log(changeArray([-1, 2, -3, 4, -5]));
 
+// function readLocalStorage(){
+//     let local_date = localStorage.getItem('key')
+//     let json_date = JSON.parse(local_date)
+//     console.log(json_date);
+// }
 
+   
+// let array = [1, 4, 3, 14, 47];
 
-// let phones = [
-//     '+79123456789',
-//     '89123456589',
-//     '89123456489',
-//     '+79123456389',
-//     '89123456289',
-//     '+79123456189',
-// ]
-
-// function changePhone(array){
-//     for (let i = 0; i < array.length; i ++){
-//         if(array[i].startsWith('8')){
-//             array[i] = array[i].replace('8', '+7')
-//         }
+// function recursiveSum(arr, index = 0) {
+//     if (index === arr.length) {
+//         return 0; 
+//     } else {
+//         return arr[index] + recursiveSum(arr, index + 1); 
 //     }
-//     console.log(array);
 // }
 
-// changePhone(phones)
-
-
+// let sum = recursiveSum(array);
+// console.log(sum);
