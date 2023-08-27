@@ -1,0 +1,16 @@
+#root{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px;
+    gap: 25px;
+}
+.container{
+    border: 1px solid black;
+    padding: 15px;
+}
+.del_area{
+    margin: 50px;
+}
+form{
+    margin: 50px;
+}

@@ -56,12 +56,53 @@
 // }}
 
 
-let url = 'https://jsonplaceholder.typicode.com/posts'
+// let url = 'https://jsonplaceholder.typicode.com/posts'
     
-fetch(url, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json; charset=UTF-8'
-    }
-})
+// fetch(url, {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json; charset=UTF-8'
+//     }
+// })
 
+function getUsers (){
+    let url = 'http://158.160.60.49:3050/users/'
+    fetch(url)
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
+getUsers()
+
+function adddNewUser(){
+    let url = 'http://158.160.60.49:3050/user/create'
+
+    const obj = {
+        name: 'Slava',
+        salary: 1000,
+        age: 37,
+        job_id: 'tak-sjak'
+    }
+
+    fetch(url, {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json' 
+            // 'Content-Type' ukazivatj objazateljno !!!!!!!!
+        },
+        body: JSON.stringify(obj)
+
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
+// adddNewUser()
+
+function deleteUsers(id){
+    let url = 'http://158.160.60.49:3050/users/' +id
+    fetch(url, {
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+// deleteUsers(18)
