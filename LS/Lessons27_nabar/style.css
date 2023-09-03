@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.navbar {
+    background-color: red;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu__link {
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-menu__link--active {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar-menu__link:not(.navbar-menu__link--active):hover{
+    background-color: #000;
+}

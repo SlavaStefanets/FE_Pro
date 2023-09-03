@@ -65,3 +65,95 @@
 // let num1 = new MathNum(25)
 // num1.doble()
 // num1.sqrt()
+
+// _______________________
+
+// Задание 1
+// Задан obj, добавьте к нему новый геттер lastValue, который будет ссылаться на значение последнего
+//  элемента массива
+
+// let obj = {
+//     numbers: ['Один','Два', 'Три', 'Четыре'],
+
+// //         get lastValue(){
+// //             return this.numbers[this.numbers.length - 1]
+// //         }
+// // }
+// // console.log(obj.lastValue);
+
+// // --------------------
+// // Задание 2
+// // задан объект obj. Определите новое сво-во abs (геттер) которое будет хранить 
+// // разницу первого и последнего элемента массива array
+
+// // let obj = {
+// //     numbers: [70,20,30,40,50,20,50],
+
+// //     get abs(){
+// //         return this.numbers[0] - this.numbers[this.numbers.length - 1]
+// //     }
+// // }
+// // console.log(obj.abs);
+
+// // ------------------------
+
+// // Задача 3
+
+// // Задан объект 
+// // Напишите сеттер setPhone, который позволит переопределить значение сво-ва phone с проверкой
+// // Если номер телефона будет указан без кода +7 (то есть начиная с 8), тогда необходимо будет заменить 8 на +7
+// // Если номер телефона будет начинаться не с 8 и не с +7, тогда номер измениться не должен
+
+// let plus7 = []
+// let plus8 = []
+
+// let contact = {
+//     phone: '+712345678',
+
+//     set setPhone(arg){
+//         if(arg.startsWith('8')){
+//             // this.phone = '+7' + arg.slice(1)   OR
+//             this.phone = arg.replace('8', '+7')
+//         } else if (arg.startsWith('+7')){
+//             this.phone = arg
+//         } else {
+//             console.log('No realy nomber');
+//         }
+//     }
+// }
+// console.log(contact.phone);
+
+// let user = {
+//     name:"Jon"
+// };
+
+// user.id = "1";
+// user["surname"] = "Done";
+
+// let x = "username";
+
+// user.x = 25
+
+// user[x] = "Hello"
+
+// console.log(user);
+
+
+let state = {};
+
+let formInputs = document.querySelectorAll(".form__input");
+
+const handlerChange = (e) => {
+    console.log(e);
+
+    state[e.target.name] = e.target.value;
+}
+
+const send = () => {
+    console.log(state);
+    console.log(`Данные успешно отправлены!`);
+}
+
+formInputs.forEach(input => input.addEventListener("keyup", handlerChange));
+
+// input6
