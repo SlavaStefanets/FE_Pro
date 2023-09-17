@@ -90,3 +90,24 @@
 // }
 // fetchUsers()
 
+import { inputId, URL_API, body } from "./vars.js";
+
+export default function fetchDataFromApi() {
+  inputId.value
+    ? fetch(`${URL_API}/${inputId.value}`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          renderCard(data);
+        })
+    : console.log("invalid data");
+}
+
+function renderCard(data) {
+  for (let i in data) {
+    const p = document.createElement("p");
+    p.innerText = `${i}: ${data[i]}`;
+    body.append(p);
+  }
+}
