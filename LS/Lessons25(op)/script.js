@@ -139,21 +139,33 @@
 // console.log(user);
 
 
-let state = {};
+// let state = {};
 
-let formInputs = document.querySelectorAll(".form__input");
+// let formInputs = document.querySelectorAll(".form__input");
 
-const handlerChange = (e) => {
-    console.log(e);
+// const handlerChange = (e) => {
+//     console.log(e);
 
-    state[e.target.name] = e.target.value;
-}
+//     state[e.target.name] = e.target.value;
+// }
 
-const send = () => {
-    console.log(state);
-    console.log(`Данные успешно отправлены!`);
-}
+// const send = () => {
+//     console.log(state);
+//     console.log(`Данные успешно отправлены!`);
+// }
 
-formInputs.forEach(input => input.addEventListener("keyup", handlerChange));
+// formInputs.forEach(input => input.addEventListener("keyup", handlerChange));
 
-// input6
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.typeOfObj = "person";
+//     this.adult = age >= 18 ? true : false;
+//     this.fullNameAge = name + " " + age;
+//   }
+  
+//   const bob = new Person("Bob", 18);
+//   const alice = new Person("Alice", 25);
+  
+//   console.log(bob);
