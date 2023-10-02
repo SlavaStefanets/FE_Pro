@@ -20,6 +20,7 @@
 // https://jsonplaceholder.typicode.com/todos
 
 
+
 async function fetchAsyncData(user) {
     let url = 'https://jsonplaceholder.typicode.com/users/';
 
@@ -27,8 +28,10 @@ async function fetchAsyncData(user) {
       let response = await fetch(url);
       let data = await response.json();
 
+      // console.log(data);
+
       checkUser(user, data);
-      userProfileCard(data);
+      userProfileCard(user, data);
 
     } catch (error) {
       console.log('Ошибка при загрузке данных:', error);
@@ -51,49 +54,60 @@ function readDataOfImput(event){   //считать данные с импута
 }
 
 
+
+
 let form = document.querySelector('.form')   //вешаем событие на форму
-form.addEventListener('submit', (e) => readDataOfImput(e))
+form.addEventListener('submit', (e) => readDataOfImput(e));
 
 
-function checkUser(newUser, arrayOfNewUsers){   //проверка юзера на существуемость for email
-    const isExsist = arrayOfNewUsers.find((elem) => elem.email === newUser.email)
-        
-    alert(isExsist)
+function checkUser(newUser, arrayOfNewUsers){   //проверка юзера на существуемость for email and username
+  const isExsist = arrayOfNewUsers.find((elem) => (elem.email === newUser.email) && (elem.username === newUser.username))
+      console.log(isExsist);
+  alert(isExsist)
 }
+// import { checkUser } from "./function_checkUser"; dont work !!!!
+
+
 
 
 function alert(isExsist){  // выводит сообщение 
    let alertMessage = document.querySelector('.alert')
-   
    alertMessage.innerHTML = isExsist ? 'Authorization was successful' : 'Такого пользователя не существует'
 }
 
 
-function userProfileCard (user) {
-    const {id, name, username, email, phone, website} = user;
 
-    document.querySelector('.user-profileCard').style.display = 'block';
 
-    document.querySelector('#id_profile')
-    id_profile.innerHTML = id;
+function userProfileCard(user, arayOfUsers) {
 
-    document.querySelector('#name_profile')
-    name_profile.innerText = name;
+  const findUsersOfEmail = arayOfUsers.filter((elem) => elem.email === user.email)
+  const objUsers = findUsersOfEmail[0]
 
-    document.querySelector('#username_profile')
-    username_profile.innerText = username;
+  // console.log(findUsersOfEmail, objUsers);
+  const userProfileDisplay = document.querySelector('.user-profileCard')
+  
+    userProfileDisplay.style.display = 'block';
+  
+  let p_id = document.querySelector('#id_profile').innerText = `ID : ` + objUsers.id;
+  let p_name = document.querySelector('#name_profile').innerText = `Name : ` + objUsers.name;
+  let p_username = document.querySelector('#username_profile').innerText = `Username : ` + objUsers.username;
+  let p_email = document.querySelector('#email_profile').innerText = `Email : ` + objUsers.email;
+  let p_phone = document.querySelector('#phone_profile').innerText = `Phone : ` + objUsers.phone;
+  let p_website = document.querySelector('#website_profile').innerText =  objUsers.website;
 
-    document.querySelector('#email_profile')
-    email_profile.innerText = email;
+  }
 
-    document.querySelector('#phone_profile')
-    phone_profile.innerText = phone;
+  let p_website = document.querySelector('#website_profile')
+  let changeWebsite = document.querySelector('.websiteButton')
+  let inputOfWebsite = document.querySelector('.inputOfWebsite')
+  let saveChanges = document.querySelector('.saveChanges')
 
-    document.querySelector('#website_profile')
-    website_profile.innerText = website;
+  changeWebsite.addEventListener('click', () => {
+    inputOfWebsite.style.display = 'block' 
+    inputOfWebsite.innerText = p_website
+    console.log(inputOfWebsite.value);
+   });
+  
 
-    
-}
+  
 
-// Ervin Howell
-// Shanna@melissa.tv

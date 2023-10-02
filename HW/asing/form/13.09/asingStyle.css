@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.website_container{
+    display: flex;
+    gap: 20px;
+}
+.websiteButton {
+    height: 20px;
+    width: 80px;
+}

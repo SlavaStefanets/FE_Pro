@@ -7,9 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./asingStyle.css">
 </head>
+
 <body>
-   <form class="form">
-    <input type="text" class="UserName" placeholder="User Name" name="username">
+    <form class="form">
+    <input type="text" class="UserName" placeholder="User Name" name="username"> -->
     <input type="text" class="Email" placeholder="Email" name="email">
     <button class="btn">Sign in</button>
    </form>
@@ -22,9 +23,13 @@
     <p id="username_profile"></p>
     <p id="email_profile"></p>
     <p id="phone_profile"></p>
-    <p id="website_profile"></p>
+    <p class="website_container">
+      <p>Website: <input class ="inputOfWebsite" name="inputWebsite" type="text" style="display: none;"> <span id="website_profile"></span></p>  
+      <button class="websiteButton">Edit Website</button>
+      <button class="saveChanges" style="display: none;">Save</button>
+    </p>
   </div>
 
-   <script src="./asing.js"></script>
-</body>
-</html>
+   <script src="./asing.js"></script> 
+   </body>
+   
