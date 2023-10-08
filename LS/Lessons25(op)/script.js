@@ -169,3 +169,61 @@
 //   const alice = new Person("Alice", 25);
   
 //   console.log(bob);
+
+
+
+// class Person {
+//     constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//     }
+//   }
+  
+//   class Teacher extends Person {
+//     constructor(name, age, classSize) {
+//       super(name, age);
+//       this.classSize = classSize;
+//     }
+//   }
+  
+//   class BioTeacher extends Teacher {
+//     constructor(name, age, classSize, hasLab) {
+//       super(name, age, classSize);
+//       this.hasLab = hasLab;
+//     }
+//   }
+  
+//   const teacher45 = new BioTeacher("mike", 48, 12, true);
+  
+//   console.log(teacher45);
+
+// class Person {
+//         constructor(name, age) {
+//           this.name = name;
+//           this.age = age;
+//         }
+// }
+
+// class student extends Person{
+//     constructor(name, age, iq){
+//         super (name, age);
+//         this.iq = iq;
+//     }
+//     welcome() {
+//         console.log("Hi Broo");
+//     }
+// }
+// class student2 extends student{
+//     constructor(name,age,iq,Math){
+//         super(name,age,iq)
+//         this.Math = Math
+//     }
+// }
+// class student3 extends student{
+//     constructor(name,age,iq,biologi){
+//         super(name,age);
+//     this.biologi = biologi;
+//     }
+    
+// }
+

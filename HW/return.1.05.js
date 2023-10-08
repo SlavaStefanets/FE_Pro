@@ -50,14 +50,14 @@
 
 // 5 --------------
 
-// function greatQuence(num){
-//     let result = '';
-//     for(let a = 1;a <= num; a++){
+function greatQuence(num){
+    let result = '';
+    for(let a = 1;a <= num; a++){
 
-//         console.log(result += '*');
-//     }
-//     return result;
-// }
-// greatQuence(5)
+        result += '*'
+    }
+    return console.log(result);;
+}
+greatQuence(5)
     
 

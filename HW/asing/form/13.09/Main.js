@@ -18,8 +18,10 @@
 // https://jsonplaceholder.typicode.com/posts
 // https://jsonplaceholder.typicode.com/albums
 // https://jsonplaceholder.typicode.com/todos
+export {alert};
 
-
+import { checkUser } from "./function_checkUser.js";
+import {userProfileCard} from "./juserProfileCard.js"
 
 async function fetchAsyncData(user) {
     let url = 'https://jsonplaceholder.typicode.com/users/';
@@ -28,10 +30,10 @@ async function fetchAsyncData(user) {
       let response = await fetch(url);
       let data = await response.json();
 
-      // console.log(data);
-
       checkUser(user, data);
       userProfileCard(user, data);
+
+      // console.log(data);
 
     } catch (error) {
       console.log('Ошибка при загрузке данных:', error);
@@ -43,16 +45,15 @@ function readDataOfImput(event){   //считать данные с импута
     event.preventDefault() // не перезагружает страницу
 
     let {username, email} = event.target  // вытягиваем инпуты по свойству нейм
-    
-    const user = {id:Date.now(), 
-        username:username.value,
+    const user = { 
+        username:username.value,   //ili
+        // username:event.target.username.value
          email:email.value} //добовляем данные с импутов в обьект
-
     event.target.reset()    // очищает инпуты
-
     fetchAsyncData(user)
+    console.log(user);
+    console.log(event);
 }
-
 
 
 
@@ -60,53 +61,28 @@ let form = document.querySelector('.form')   //вешаем событие на 
 form.addEventListener('submit', (e) => readDataOfImput(e));
 
 
-function checkUser(newUser, arrayOfNewUsers){   //проверка юзера на существуемость for email and username
-  const isExsist = arrayOfNewUsers.find((elem) => (elem.email === newUser.email) && (elem.username === newUser.username))
-      console.log(isExsist);
-  alert(isExsist)
-}
-// import { checkUser } from "./function_checkUser"; dont work !!!!
 
-
-
-
-function alert(isExsist){  // выводит сообщение 
+ function alert(isExsist){  // выводит сообщение 
    let alertMessage = document.querySelector('.alert')
+   let changeWebsite = document.querySelector('.websiteButton')
+   let p_WebsiteName = document.querySelector('.p_WebsiteName')
+   p_WebsiteName.style.display = isExsist ? 'block' : 'none'
+   changeWebsite.style.display = isExsist ? 'block' : 'none'
+   ButtonSearch.style.display = isExsist ? 'block' : 'none'
    alertMessage.innerHTML = isExsist ? 'Authorization was successful' : 'Такого пользователя не существует'
 }
 
 
 
+  const ButtonSearch = document.querySelector('.ButtonSearch')
+  ButtonSearch.addEventListener('click', () => {
 
-function userProfileCard(user, arayOfUsers) {
+    window.location.href = 'http://127.0.0.1:5500/HW/asing/form/13.09/search.html'
+  });
 
-  const findUsersOfEmail = arayOfUsers.filter((elem) => elem.email === user.email)
-  const objUsers = findUsersOfEmail[0]
 
-  // console.log(findUsersOfEmail, objUsers);
-  const userProfileDisplay = document.querySelector('.user-profileCard')
-  
-    userProfileDisplay.style.display = 'block';
-  
-  let p_id = document.querySelector('#id_profile').innerText = `ID : ` + objUsers.id;
-  let p_name = document.querySelector('#name_profile').innerText = `Name : ` + objUsers.name;
-  let p_username = document.querySelector('#username_profile').innerText = `Username : ` + objUsers.username;
-  let p_email = document.querySelector('#email_profile').innerText = `Email : ` + objUsers.email;
-  let p_phone = document.querySelector('#phone_profile').innerText = `Phone : ` + objUsers.phone;
-  let p_website = document.querySelector('#website_profile').innerText =  objUsers.website;
 
-  }
 
-  let p_website = document.querySelector('#website_profile')
-  let changeWebsite = document.querySelector('.websiteButton')
-  let inputOfWebsite = document.querySelector('.inputOfWebsite')
-  let saveChanges = document.querySelector('.saveChanges')
-
-  changeWebsite.addEventListener('click', () => {
-    inputOfWebsite.style.display = 'block' 
-    inputOfWebsite.innerText = p_website
-    console.log(inputOfWebsite.value);
-   });
   
 
   

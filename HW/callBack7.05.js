@@ -50,14 +50,17 @@
 // 2 ------------
 
 
-let numbers =[1,2,3,4,5]
+// let numbers =[1,2,3,4,5]
 
-function checkSome(array, callback){
-for (let i = 0; i < array.length; i ++){
-      if (callback(array[i])){
-          return 'минимум 1 элемент одов условия'
-      }
-}  return 'ни один элемент не одов условие'
-}
-let result = checkSome(numbers, (elem) => elem === 0)
-console.log(result)
+// function checkSome(array, callback){
+// for (let i = 0; i < array.length; i ++){
+//       if (callback(array[i])){
+//           return 'минимум 1 элемент одов условия'
+//       }
+// }  return 'ни один элемент не одов условие'
+// }
+// let result = checkSome(numbers, (elem) => elem === 0)
+// console.log(result)
+
+
+
