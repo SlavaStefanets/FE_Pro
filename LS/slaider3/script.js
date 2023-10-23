@@ -30,3 +30,20 @@ images.forEach((el) => {
     card.style.backgroundImage = `url("${el}")`;
     cards.append(card);
   });
+
+  function go_left() {
+    if (slider_index !== 0) {
+      slider_index--;
+      cards.style.left = `${-1 * slider_index * 500}px`;
+    }
+  }
+  
+  function go_right() {
+    if (slider_index < images.length - 1) {
+      slider_index++;
+      cards.style.left = `${-1 * slider_index * 500}px`;
+    }
+  }
+  
+  left_btn.addEventListener("click", go_left);
+  right_btn.addEventListener("click", go_right);

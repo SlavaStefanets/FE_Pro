@@ -7,5 +7,5 @@ openBtn.addEventListener("click", () => {
 });
 
 closeBtn.addEventListener("click", () => {
-  modal_container.classList.add("close_status")
+  modal_container.classList.add("close_status");
 });
