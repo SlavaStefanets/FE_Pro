@@ -16,21 +16,47 @@
 // fetch get запросу /posts (jsonplaceholder) и в уведомлении помимо отображения статусов отображать 
 // данные с сервера предварительно показывая loading(скелетон итд) при обработке запроса.
 
+// email: "Sincere@april.biz"
+
 let inputEmail = document.querySelector('.inputEmail')
 let inputPassword = document.querySelector('.inputPassword')
-let Btn_reg = document.querySelector('.Btn_reg')
 let Btn_open = document.querySelector('.Btn_open')
 let body = document.body
 let alert = document.createElement('p')
 
-Btn_reg.addEventListener('click',() => {
-    if (!inputEmail.value || !inputPassword.value){
-        alert.innerHTML = 'Empty inputs'
-        body.append(alert)
-    } else {
-        localStorage.setItem('dateOfEmail', inputEmail.value )
-        localStorage.setItem('dateOfPassword', inputPassword.value)
-        alert.innerHTML = 'Супер, данные сохранены'
-        body.append(alert)
+
+async function fetchData() {
+    let url = 'https://jsonplaceholder.typicode.com/users';
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        localStorage.setItem('usersData', JSON.stringify(data));
+        // console.log(data);
+    } catch (error){
+        console.log('Ошибка при загрузке данных:', error);
     }
-})
+}
+fetchData();
+
+function checkUser(email) {
+    let users = JSON.parse(localStorage.getItem('usersData'));
+    return users.find(elem => elem.email === email);
+  }
+
+
+  Btn_open.addEventListener('click', (e) => {
+    e.preventDefault()
+    let email = inputEmail.value;
+    let password = inputPassword.value;
+    let  checkEmail = checkUser(email);
+    if (checkEmail) {
+              alert.innerHTML = ('Успешный вход!');
+              body.append(alert)
+              window.location.href = 'http://127.0.0.1:5500/form22.10/form.html' 
+            } else {
+              alert.innerHTML = ('Ошибка входа.');
+              body.append(alert)
+              return checkUser;
+            }     
+  });
+
